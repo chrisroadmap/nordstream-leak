@@ -1,42 +1,28 @@
-# template-jupyter-project
-Template to use for new python-based Jupyter notebook projects
+# nordstream-leak
+Climate implications of the NordStream pipeline leak in September 2022.
 
-## First steps
+## Pre-requisites
+- `anaconda` (install from www.anaconda.org)
+- `python` (v3.6 or later)
+- `fair` v2.1-dev. This is currently unreleased - please contact me if you want access (twitter @chrisroadmap)
 
-This assumes that you are developing with `conda` and `python` 3.7, 3.8 or 3.9. These instructions should work for Windows when using Anaconda Prompt and for MacOS in Terminal (and by extension, likely will work on Linux).
+## Reproduction
 
-1. Edit the `environment.yml` file:
-  - Uncomment the `name` attribute.
-  - After `name`, enter the name you want for your environment. Good practice is to use the same name for the environment as for the repo.
-  - Edit the dependencies list as required.
-2. Create your environment:
-
+1. Clone the repository to your local disk.
+2. Create the `conda` environment with
 ```
 conda env create -f environment.yml
 ```
-3. If you want to make nice version-control friendly notebooks, which will remove all output and data upon committing, run
+3. Activate the environment with 
+```
+conda activate nordstream-leak
+```
+4. (optional) If you want to make nice version-control friendly notebooks, which will remove all output and data upon committing to GitHub, run
 ```
 nbstripout --install
 ```
-
-4. Examine .gitignore and decide where you want to put any large input or output datasets that you don't want to commit to GitHub, and fill in these paths.
-
-## Operation 
-
-### Developing your package
-
-Most of the time your workflow will look like this
-
+5. Start a `jupyter` console with
 ```
-conda activate your-env-name
 jupyter notebook
 ```
-
-### Updating requirements
-
-As you build the package you will likely want to add more dependencies. Edit the `environment.yml` file and run
-```
-conda env update -f environment.yml --prune
-```
-
-Please do not overwrite the `environment.yml` file using `conda env export`, as this exports everything in your local environment including all sub-dependencies and OS-specific packages (and sometimes local paths).
+then navigate to the notebooks directory and run the notebooks.
