@@ -1,25 +1,17 @@
-# name: template-jupyter-project
+name: nordstream-leak
 channels:
-  - chrisroadmap
   - conda-forge
   - defaults
 dependencies:
-  - climateforcing
   - jupyter
   - nbstripout
-# you might also want:
-#   - fair
-#   - h5py
-#   - iris
-#   - matplotlib
-#   - numpy
-#   - openpyxl
-#   - pandas
-#   - scipy
-#   - seaborn
-#   - statsmodels
-#   - tqdm
-# if you need to pip install anything:
-#   - pip
-#   - pip:
-#     - thing-to-pip-install
+  - matplotlib
+  - numpy
+  - pandas
+  - pooch
+  - scipy
+  - tqdm
+  - pip
+# fair2.1 needs to be pip-installed from a local repository. If you have this, edit the path below.
+  - pip:
+    - -e ../fair2.1-calibrate
