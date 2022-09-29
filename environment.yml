@@ -1,0 +1,25 @@
+# name: template-jupyter-project
+channels:
+  - chrisroadmap
+  - conda-forge
+  - defaults
+dependencies:
+  - climateforcing
+  - jupyter
+  - nbstripout
+# you might also want:
+#   - fair
+#   - h5py
+#   - iris
+#   - matplotlib
+#   - numpy
+#   - openpyxl
+#   - pandas
+#   - scipy
+#   - seaborn
+#   - statsmodels
+#   - tqdm
+# if you need to pip install anything:
+#   - pip
+#   - pip:
+#     - thing-to-pip-install
