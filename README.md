@@ -1,7 +1,7 @@
 # nordstream-leak
 Climate implications of the NordStream pipeline leak in September 2022.
 
-![Climate projections of NordStream pipeline leak](../plots/NordStream.png "NordStream")
+![Climate projections of NordStream pipeline leak](plots/NordStream.png "NordStream")
 
 ## Pre-requisites
 - `anaconda` (install from www.anaconda.org)
